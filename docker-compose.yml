@@ -1,0 +1,11 @@
+version: '3'
+services:
+  app:
+    container_name: ${APP_NAME}
+    image: ${APP_NAME}
+    build: .
+    command: ['python3', 'index.py']
+    ports:
+      - '${PORT}:${PORT}'
+    volumes:
+      - .:/usr/src/app
